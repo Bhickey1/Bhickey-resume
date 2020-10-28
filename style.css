@@ -1,0 +1,172 @@
+*{
+    padding: 5px;
+    margin: 10;
+     /* border-style: dashed;  */
+    box-sizing: border-box;
+    background-color: rgb(34, 39, 43);
+    }
+
+   /* @media screen and (max-width: 600px) {
+  .container {
+      height: 100%;
+      display: grid;
+      grid-gap: 3px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+          "q"
+          "h"
+          "e"
+          "b"
+          "f"; */
+  
+   
+  /* step two - build your grid desktop and tablet grid*/
+  .container {
+      height: 100%;
+      display: grid;
+      grid-gap: 40px;
+      /* this will be  the same for everyone */
+      grid-template-columns: repeat(2, 1fr);
+      /* this will be customized, based on your grid, use pixels or % */
+      grid-template-rows: 90px;
+      /* use letters from step 1 to build the grid */
+      width: 65%;
+      margin: 0 auto;
+      grid-template-areas: 
+          "n l"  
+          "h h"
+          "p s"
+          "p x"
+          "p e"
+          "f f";
+          gap: 4em 5em;
+  }
+  
+  /* step three - build your mobile grid, what becomes active when the pixels are 800px or less */
+  @media screen and (max-width: 800px) {
+  
+      .container{
+          display: grid;
+          grid-gap: 3px;
+          /* grid is only one column, keep this way */
+          grid-template-columns: 1fr;
+          /* you can enter values, or auto will adjust the box sizes based on content */
+          grid-template-rows: auto;
+          width: 85%;
+          margin: 0 auto; 
+          grid-template-areas:
+          "n"
+          "l"
+          "h"
+          "p"
+          "s"
+          "x"
+          "e"
+          "f";
+      }
+  }
+  
+  /* step 1 - write in each of your sections and assign each of your sections a letter */
+
+  nav{
+      grid-area: n;
+      display: inline;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: aqua;
+  }
+  .dropbtn {
+    background-color: #4f7199;
+    color: rgb(134, 161, 161);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: aqua;}
+  /* unvisited link */
+a:link {
+    color: #9abfd8;
+  }
+  /* visited link */
+  a:visited {
+    color: #2c3f2c;
+  }
+  /* mouse over link */
+  a:hover {
+    color: #8cabb4;
+  }
+  /* selected link */
+  a:active {
+    color: #9898be;
+  }
+    /* how the fuk this work- change the weights of the Hs */
+  .h2{
+   text-transform: capitalize;
+}
+
+  header {
+      grid-area: h;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(134, 161, 161);
+     
+  }
+
+  .logo{
+    grid-area: l;
+  }
+  
+  .skills{
+      grid-area: s;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(134, 161, 161);
+  }
+  
+  .education {
+      grid-area: e;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(134, 161, 161);
+  }
+  
+  .experience {
+      grid-area: x;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(134, 161, 161);
+  }
+  .profile{
+      grid-area: p;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(134, 161, 161);
+      
+  }
+  footer{
+      grid-area: f;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(134, 161, 161);
+  }
+ 
